@@ -18,7 +18,7 @@ private:
 	Activity(const  Activity &other);
 
 protected:
-	Length* distance;
+	Length* activityDistance;
     bool completed;
 
 public:
@@ -27,13 +27,12 @@ public:
     
     virtual double getConsumedEnergy(Length totalDistance) = 0;
     
-    virtual Length getDistance() = 0;
+    virtual Length* getActivityDistance() = 0;
 
     int getActivityID() const;
     int getAthleteID() const;
 
     bool getCompleted() const;
-
 
 	virtual ~Activity();
 };
