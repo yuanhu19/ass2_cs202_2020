@@ -3,7 +3,7 @@
 #include "Length.hpp"
 #include "Activity.hpp"
 #include <vector>
-#inlcude <iostream>
+#include <iostream>
 
 class WalkingActivity : public Activity{
 

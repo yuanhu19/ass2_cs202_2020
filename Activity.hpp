@@ -29,7 +29,11 @@ public:
     
     virtual Length getDistance() = 0;
 
-    bool getCompleted();
+    int getActivityID() const;
+    int getAthleteID() const;
+
+    bool getCompleted() const;
+
 
 	virtual ~Activity();
 };
