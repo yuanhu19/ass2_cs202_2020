@@ -11,6 +11,8 @@ private:
     
    
     std::vector<Length*> routeLength;
+
+    Length* scooterDistance;
     
     ScooterActivity& operator=(const ScooterActivity &other);
 	ScooterActivity(const  ScooterActivity &other);
@@ -20,7 +22,7 @@ public:
 
     ScooterActivity(const int athleteID);
     
-    Length getDistance();
+    Length* getActivityDistance();
     double getConsumedEnergy(Length totalDistance);
     
     

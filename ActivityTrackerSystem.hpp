@@ -20,6 +20,7 @@ private:
 public:
     ActivityTrackerSystem();
     static std::string author();
+    
     //Return vector of completed activities
     std::vector<Activity*> getCompletedActivities();
 
