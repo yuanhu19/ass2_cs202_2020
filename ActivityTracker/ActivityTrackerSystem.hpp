@@ -15,7 +15,7 @@ private:
 
     std::vector<Activity*> activities;
     std::vector<Athlete*> athletes;
-    std::vector<EnergyGoal*> engergyGoals;
+    std::vector<EnergyGoal*> energyGoals;
 
 public:
     ActivityTrackerSystem();
@@ -27,12 +27,16 @@ public:
     //Return vector of pending activities
     std::vector<Activity*> getPendingActivities();
 
+    //Return vector of target activities
     std::vector<Activity*> getActivities() const;
+
     std::vector<Athlete*> getAthletes() const;
-    std::vector<EnergyGoal*> getEngergyGoals() const;
+
+    //Return vector of targetGoals
+    std::vector<EnergyGoal*> getEnergyGoals() const;
 
     //Return vector of targetGoals depending on whether achieved
-    std::vector<EnergyGoal*> getEngergyGoals(bool goalAchieved) const;
+    std::vector<EnergyGoal*> getEnergyGoals(bool goalAchieved) const;
 
 
 virtual ~ActivityTrackerSystem();

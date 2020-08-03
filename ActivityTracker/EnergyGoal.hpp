@@ -13,6 +13,7 @@ private:
     bool goalAchieved;
     std::string name;
     int ID;
+    static int nextID;
 
     std::vector<Activity*> targetActivities;
 
@@ -25,7 +26,7 @@ public:
 
     std::string getGoalName() const;
 
-
+    int getID();
     int getTargetEnergy() const;
     double getBudgetCost() const;
 

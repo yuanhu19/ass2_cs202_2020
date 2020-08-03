@@ -4,7 +4,7 @@ int Activity::nextID = 0;
 Activity::Activity(const int athleteID){
 	this->activityID = ++nextID;
 	this->athleteID = athleteID;
-	this->distance = new Length(0,0);
+	this->activityDistance = new Length(0,0);
 
 }
 
