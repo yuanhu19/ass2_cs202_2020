@@ -31,4 +31,7 @@ maths_test
 *.exe
 *.out
 *.app
+
+#vscode
+*.json
  
