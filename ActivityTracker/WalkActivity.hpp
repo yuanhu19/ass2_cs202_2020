@@ -10,9 +10,7 @@ class WalkActivity : public Activity{
 private:
     
     Length* walkDistance;
-    std::vector<Length*> routeLength;
     
-    double energy;
     WalkActivity& operator=(const  WalkActivity &other);
 	WalkActivity(const  WalkActivity &other);
 
@@ -20,11 +18,15 @@ public:
 
     WalkActivity(const int athleteID);
     
+    bool setWalkDistance(std::vector<Length> routeLengths);
+    
     Length* getActivityDistance();
     
+    double getActivityCost();
+
     double getConsumedEnergy();
-    
-    std::vector<Length*> getRouteLength();
+
+    virtual ~WalkActivity();
 };
 
 

@@ -8,31 +8,31 @@ private:
     int activityID;
     int athleteID;
     static int nextID;
-    
-    double cost;
-    double energy;
-	
-  
 
     Activity& operator=(const  Activity &other);
 	Activity(const  Activity &other);
 
 protected:
+    
+    double energyConsumed;
 	Length* activityDistance;
-    bool completed;
+    bool isCompleted;
+    double activityCost;
 
 public:
-    //
+    
 	Activity(const int athleteID);
     
-    virtual double getConsumedEnergy(Length totalDistance) = 0;
-    
+    virtual double getConsumedEnergy() = 0;
+    virtual double getActivityCost() = 0;
     virtual Length* getActivityDistance() = 0;
 
     int getActivityID() const;
     int getAthleteID() const;
 
-    bool getCompleted() const;
+    bool setActivityCompleted() const;
+    bool getActivityCompleted() const;
+
 
 	virtual ~Activity();
 };

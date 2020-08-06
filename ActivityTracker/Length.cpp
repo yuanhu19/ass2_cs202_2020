@@ -1,57 +1,60 @@
-
 #include "Length.hpp"
 
 Length::Length() {
-	// TODO implement
+	this->inches = 0;
 }
 
 Length::Length(int feet, int inches) {
-	// TODO implements
+	if (feet < 0)
+		feet = 0;
+	if (inches < 0)
+		inches = 0;
+	this->inches = feet * 12 + inches;
 }
 
 int Length::getFeet() const {
-	// TODO implement
-	return -1;
+	return inches / 12;
 }
 
 int Length::getInches() const {
-	// TODO implement
-	return -1;
+	return inches % 12;
 }
 
 int Length::asInches() const {
-	// TODO implement
-	return -1;
+	return inches;
 }
 
 void Length::addFeet(int feet) {
-	// TODO implement
+	addInches(12*feet);
 }
 
 void Length::addInches(int inches) {
-	// TODO implement
+	if (inches > 0)
+		this->inches += inches;
 }
 
 void Length::subtractFeet(int feet) {
-	// TODO implement
+	subtractInches(feet*12);
 }
 
 void Length::subtractInches(int inches) {
-	// TODO implement
+	if (inches > 0 && inches <= this->inches)
+		this->inches -= inches;
 }
 
 void Length::add(const Length &other) {
-	// TODO implement
+	addInches(other.asInches());
 }
 
 void Length::subtract(const Length &other) {
-	// TODO implement
+	subtractInches(other.asInches());
 }
 
 void Length::average(Length &other) {
-	// TODO implement
+	int total = this->inches += other.inches;
+	this->inches = total/2;
+	other.inches = total/2;
 }
 
 Length::~Length() {
-	// TODO implement
 }

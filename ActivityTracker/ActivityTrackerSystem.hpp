@@ -22,6 +22,11 @@ public:
     static std::string author();
     
     //Return vector of completed activities
+
+    bool addAthletes(Athlete* athlete);
+    bool addActivity(Activity* activity);
+    bool addEnergyGoal(EnergyGoal* energygoal);
+    
     std::vector<Activity*> getCompletedActivities();
 
     //Return vector of pending activities

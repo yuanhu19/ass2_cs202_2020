@@ -30,10 +30,13 @@ public:
     int getTargetEnergy() const;
     double getBudgetCost() const;
 
-    std::vector<Activity*> getTargetActivities();
-    void setTargetActivity(Activity* activity);
+    bool setTargetActivitiesSuccessfully(std::vector<Activity*> targetActivities);
 
-    bool getGoalAchieved();
+    std::vector<Activity*> getTargetActivities();
+    
+
+    bool setGoalAchieved(bool achieved);
+
 
     virtual ~EnergyGoal();
 

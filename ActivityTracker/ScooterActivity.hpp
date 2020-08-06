@@ -7,10 +7,7 @@
 
 class ScooterActivity : public Activity{
 
-private:
-    
-   
-    std::vector<Length*> routeLength;
+private:   
 
     Length* scooterDistance;
     
@@ -21,9 +18,16 @@ private:
 public:
 
     ScooterActivity(const int athleteID);
+
+    std::vector<Length*> getRouteLengths();
     
+    void setScooterDistance(std::vector<Length> routeLengths);
+
     Length* getActivityDistance();
-    double getConsumedEnergy(Length totalDistance);
+    
+    double getActivityCost();
+
+    double getConsumedEnergy();
     
     
 };

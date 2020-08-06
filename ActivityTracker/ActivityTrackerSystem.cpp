@@ -12,6 +12,17 @@ std::string ActivityTrackerSystem::author(){
     return "aaaa111";
 }
 
+bool ActivityTrackerSystem::addAthletes(Athlete* athlete){
+    //todo
+}
+bool ActivityTrackerSystem::addActivity(Activity* activity){
+    //todo
+}
+bool ActivityTrackerSystem::addEnergyGoal(EnergyGoal* energygoal){
+    //todo
+}
+
+
 std::vector<Activity*> ActivityTrackerSystem::getCompletedActivities(){
    
     std::vector<Activity*> completedActivities;

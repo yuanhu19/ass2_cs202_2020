@@ -1,10 +1,12 @@
 
-#ifndef LENGTH_H_
-#define LENGTH_H_
+#ifndef LENGTH_HPP_
+#define LENGTH_HPP_
 
 class Length {
 private:
 	//TODO: declare fields here
+	int feet;
+	int inches;
 public:
 	Length();
 	Length(int feet, int inches);
@@ -25,4 +27,4 @@ public:
 	virtual ~Length();
 };
 
-#endif /* LENGTH_H_ */
+#endif /* LENGTH_HPP_ */
