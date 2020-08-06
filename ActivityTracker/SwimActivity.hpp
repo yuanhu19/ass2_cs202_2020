@@ -22,7 +22,7 @@ public:
 
     SwimActivity(const int athleteID);
     
-    void setSwimDistance(int laps, Length poolLength);
+    bool setSwimDistance(int laps, Length poolLength);
 
     Length* getActivityDistance();
     

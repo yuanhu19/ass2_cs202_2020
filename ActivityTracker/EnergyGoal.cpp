@@ -6,7 +6,7 @@ EnergyGoal::EnergyGoal(double budgetCost,double targetEnergy) {
 
     this->budgetCost = budgetCost;
     this->targetEnergy = targetEnergy;
-    this->ID = ++nextID;
+    this->goalID = ++nextID;
     this->goalAchieved = false;
    
 }
@@ -60,8 +60,25 @@ bool EnergyGoal::setGoalAchieved(bool achieved){
     return this->goalAchieved;
 }
 
-int EnergyGoal::getID(){
-	return this->ID;
+//get all the target activities completed 
+bool EnergyGoal::getIsGoalAchieved(){
+    for(unsigned i = 0; i<targetActivities.size();i++){
+        if(!targetActivities[i]->getActivityCompleted()){
+            return false;
+        }
+    } 
+    this->goalAchieved = true;
+    return this->goalAchieved;
+}
+
+
+int EnergyGoal::getGoalID(){
+	return this->goalID;
+}
+
+
+int EnergyGoal::getTotalEnergyGoalCount(){
+    return nextID;
 }
 
 EnergyGoal:: ~EnergyGoal(){

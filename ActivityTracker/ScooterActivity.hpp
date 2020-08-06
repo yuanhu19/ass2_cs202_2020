@@ -21,7 +21,7 @@ public:
 
     std::vector<Length*> getRouteLengths();
     
-    void setScooterDistance(std::vector<Length> routeLengths);
+    bool setScooterDistance(std::vector<Length> routeLengths);
 
     Length* getActivityDistance();
     

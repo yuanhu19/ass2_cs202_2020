@@ -31,8 +31,6 @@ bool Activity::getActivityCompleted() const{
 }
 
 
-
-
 Activity::~Activity() {
 
 }
