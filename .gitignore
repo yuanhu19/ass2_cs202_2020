@@ -27,11 +27,18 @@
 *.lib
 
 # Executables
-maths_test
+tracker_test
 *.exe
 *.out
 *.app
 
 #vscode
 *.json
- 
+
+.cproject
+.settings
+.project
+.vscode
+.directory
+.DS_Store
+
