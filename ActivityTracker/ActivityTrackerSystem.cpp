@@ -126,12 +126,12 @@ std::vector<Athlete*> ActivityTrackerSystem::getAthletes() const{
     return this->athletes;
 }
     
-std::vector<EnergyGoal*> ActivityTrackerSystem::getEnergyGoals() const{
+std::vector<EnergyGoal*> ActivityTrackerSystem::getEnergyGoals() {
     return this->energyGoals;
 }
 
 
-std::vector<EnergyGoal*> ActivityTrackerSystem::getAchivedEnergyGoals() const{
+std::vector<EnergyGoal*> ActivityTrackerSystem::getAchivedEnergyGoals() {
 
     std::vector<EnergyGoal*> energygoalsAchieved;
 
@@ -145,10 +145,10 @@ std::vector<EnergyGoal*> ActivityTrackerSystem::getAchivedEnergyGoals() const{
                            
             }
         }
-    
+    }
     return energygoalsAchieved;
 }
 
-ActivityTrackerSystem::~ActivityTrackerSystem(){
-    
+ActivityTrackerSystem::~ActivityTrackerSystem(){ 
+   //to do 
 }

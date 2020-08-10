@@ -43,10 +43,10 @@ public:
     std::vector<Athlete*> getAthletes() const;
 
     //Return vector of targetGoals
-    std::vector<EnergyGoal*> getEnergyGoals() const;
+    std::vector<EnergyGoal*> getEnergyGoals();
 
     //Return vector of energyGoals achieved
-    std::vector<EnergyGoal*> getAchivedEnergyGoals() const;
+    std::vector<EnergyGoal*> getAchivedEnergyGoals();
 
 
 virtual ~ActivityTrackerSystem();
